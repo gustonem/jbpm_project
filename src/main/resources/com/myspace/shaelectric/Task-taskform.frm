@@ -1,1 +1,0 @@
-{"id":"b1c55ea9-d6de-44b3-98b9-7cebde0a9cba","name":"Task-taskform.frm","model":{"taskName":"Task","processId":"Shaelectric.Chargedevice","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}
