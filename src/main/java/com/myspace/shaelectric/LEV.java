@@ -6,12 +6,35 @@ package com.myspace.shaelectric;
 
 public class LEV implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public LEV() {
-    }
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.lang.Integer id;
+	@org.kie.api.definition.type.Label(value = "battery")
+	private java.lang.Integer battery;
 
+	public LEV() {
+	}
 
+	public java.lang.Integer getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Integer id) {
+		this.id = id;
+	}
+
+	public java.lang.Integer getBattery() {
+		return this.battery;
+	}
+
+	public void setBattery(java.lang.Integer battery) {
+		this.battery = battery;
+	}
+
+	public LEV(java.lang.Integer id, java.lang.Integer battery) {
+		this.id = id;
+		this.battery = battery;
+	}
 
 }
