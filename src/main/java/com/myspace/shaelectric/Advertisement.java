@@ -6,12 +6,44 @@ package com.myspace.shaelectric;
 
 public class Advertisement implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Advertisement() {
-    }
+	private java.lang.String channel;
+	private java.lang.String type;
+	private java.lang.Double price;
 
+	public Advertisement() {
+	}
 
+	public java.lang.String getChannel() {
+		return this.channel;
+	}
 
+	public void setChannel(java.lang.String channel) {
+		this.channel = channel;
+	}
+
+	public java.lang.String getType() {
+		return this.type;
+	}
+
+	public void setType(java.lang.String type) {
+		this.type = type;
+	}
+
+	public java.lang.Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(java.lang.Double price) {
+		this.price = price;
+	}
+
+	public Advertisement(java.lang.String channel, java.lang.String type,
+			java.lang.Double price) {
+		this.channel = channel;
+		this.type = type;
+		this.price = price;
+	}
 
 }
