@@ -12,6 +12,10 @@ public class Advertisement implements java.io.Serializable {
 	private java.lang.String type;
 	private java.lang.Double price;
 
+	private java.lang.Boolean proposalAccepted;
+
+	private java.lang.Boolean finalAccepted;
+
 	public Advertisement() {
 	}
 
@@ -39,11 +43,30 @@ public class Advertisement implements java.io.Serializable {
 		this.price = price;
 	}
 
+	public java.lang.Boolean getProposalAccepted() {
+		return this.proposalAccepted;
+	}
+
+	public void setProposalAccepted(java.lang.Boolean proposalAccepted) {
+		this.proposalAccepted = proposalAccepted;
+	}
+
+	public java.lang.Boolean getFinalAccepted() {
+		return this.finalAccepted;
+	}
+
+	public void setFinalAccepted(java.lang.Boolean finalAccepted) {
+		this.finalAccepted = finalAccepted;
+	}
+
 	public Advertisement(java.lang.String channel, java.lang.String type,
-			java.lang.Double price) {
+			java.lang.Double price, java.lang.Boolean proposalAccepted,
+			java.lang.Boolean finalAccepted) {
 		this.channel = channel;
 		this.type = type;
 		this.price = price;
+		this.proposalAccepted = proposalAccepted;
+		this.finalAccepted = finalAccepted;
 	}
 
 }
