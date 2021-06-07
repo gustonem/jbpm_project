@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_otMpIMdUEeuK_O8NefNLuw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_9BcwAMdVEeuK_O8NefNLuw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_lev_idItem" structureRef="Integer"/>
   <bpmn2:itemDefinition id="_batteryItem" structureRef="Integer"/>
   <bpmn2:itemDefinition id="_lev_typeItem" structureRef="String"/>
@@ -15,17 +15,8 @@
     <bpmn2:property id="battery" itemSubjectRef="_batteryItem" name="battery"/>
     <bpmn2:property id="lev_type" itemSubjectRef="_lev_typeItem" name="lev_type"/>
     <bpmn2:property id="charging" itemSubjectRef="_chargingItem" name="charging"/>
-    <bpmn2:sequenceFlow id="_8F596190-157C-4928-8E80-0404A342CAF7" name="Yes" sourceRef="_4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3" targetRef="_08F3C379-D075-4F62-9CAC-3A40F6E01151">
-      <bpmn2:extensionElements>
-        <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Yes]]></drools:metaValue>
-        </drools:metaData>
-      </bpmn2:extensionElements>
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_otNQMMdUEeuK_O8NefNLuw" language="http://www.java.com/java"><![CDATA[java.lang.Integer bat = (java.lang.Integer) kcontext.getVariable("battery");
-return KieFunctions.greaterThan(bat, "80");
-]]></bpmn2:conditionExpression>
-    </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_B2F99227-0084-4194-979D-E32E0EA1E0A1" sourceRef="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8" targetRef="_4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3"/>
+    <bpmn2:sequenceFlow id="_296ADE49-62ED-425F-B8B5-52C0256C9BFC" sourceRef="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8" targetRef="_BF464CDB-78AA-479B-AF03-F314EE798E0D"/>
+    <bpmn2:sequenceFlow id="_40351DF8-5210-4EAB-A9B3-CAB8D471E936" sourceRef="_D9FD6FD0-005B-469A-8293-49EB9ABA4864" targetRef="_1FA2600B-D753-4892-9C98-B7D34C741AFD"/>
     <bpmn2:sequenceFlow id="_B98D2DA4-13BD-46E5-80C0-3EDC1DD0232F" sourceRef="_00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930" targetRef="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8"/>
     <bpmn2:sequenceFlow id="_19D786FC-D7FB-4C03-B719-FF352D327937" sourceRef="_B5CCC057-EF30-4952-B1A7-DE82EDC33570" targetRef="_00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930">
       <bpmn2:extensionElements>
@@ -35,31 +26,34 @@ return KieFunctions.greaterThan(bat, "80");
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_8E979A52-2DFD-42E6-AFFD-8E4CE717A781" sourceRef="_A56CAD33-A695-4F9C-985E-B90B38721AEA" targetRef="_08F3C379-D075-4F62-9CAC-3A40F6E01151"/>
-    <bpmn2:sequenceFlow id="_CFBFF9DF-EE09-48AF-89DE-EBAA73B37C54" sourceRef="_2D353FE5-7EA9-4442-9D02-125BDD913A92" targetRef="_A56CAD33-A695-4F9C-985E-B90B38721AEA"/>
-    <bpmn2:sequenceFlow id="_BA648518-7868-42EE-ACF9-2CA76042FD84" name="No" sourceRef="_4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3" targetRef="_2D353FE5-7EA9-4442-9D02-125BDD913A92">
+    <bpmn2:sequenceFlow id="_5F8F2A84-738B-4BAE-9592-FF0B237B5603" sourceRef="_1FA2600B-D753-4892-9C98-B7D34C741AFD" targetRef="_A56CAD33-A695-4F9C-985E-B90B38721AEA"/>
+    <bpmn2:sequenceFlow id="_EC761C30-65BF-45EA-A201-E216CF6C2F74" sourceRef="_2D353FE5-7EA9-4442-9D02-125BDD913A92" targetRef="_1FA2600B-D753-4892-9C98-B7D34C741AFD"/>
+    <bpmn2:sequenceFlow id="_49458C81-71A1-4223-A836-1BB2FD4FA9A5" sourceRef="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6" targetRef="_267D009A-15D0-4B9D-A7A2-544B05562087"/>
+    <bpmn2:sequenceFlow id="_C92D2FE5-BDF6-4644-A873-4E2D21BAF909" sourceRef="_08F3C379-D075-4F62-9CAC-3A40F6E01151" targetRef="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6"/>
+    <bpmn2:sequenceFlow id="_CE593B38-2CF4-4B32-AFCD-416B7FAC09F3" name="fast" sourceRef="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" targetRef="_2D353FE5-7EA9-4442-9D02-125BDD913A92">
       <bpmn2:extensionElements>
-        <drools:metaData name="isAutoConnection.target">
-          <drools:metaValue><![CDATA[true]]></drools:metaValue>
-        </drools:metaData>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[No]]></drools:metaValue>
+          <drools:metaValue><![CDATA[fast]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_9BcwAcdVEeuK_O8NefNLuw" language="http://www.java.com/java"><![CDATA[return KieFunctions.equalsTo(charging, "\"fast\"");]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_3A579402-6A99-4F27-B30D-7DE92BA60315" name="slow" sourceRef="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" targetRef="_D9FD6FD0-005B-469A-8293-49EB9ABA4864">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[slow]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_9BcwAsdVEeuK_O8NefNLuw" language="http://www.java.com/java"><![CDATA[return KieFunctions.equalsTo(charging, "\"slow\"");]]></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_0ED6ECD3-F9D1-4F1F-805F-6FD62FD9D9F9" name="none" sourceRef="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" targetRef="_08F3C379-D075-4F62-9CAC-3A40F6E01151">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[none]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
     </bpmn2:sequenceFlow>
-    <bpmn2:sequenceFlow id="_49458C81-71A1-4223-A836-1BB2FD4FA9A5" sourceRef="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6" targetRef="_267D009A-15D0-4B9D-A7A2-544B05562087"/>
-    <bpmn2:sequenceFlow id="_C92D2FE5-BDF6-4644-A873-4E2D21BAF909" sourceRef="_08F3C379-D075-4F62-9CAC-3A40F6E01151" targetRef="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6"/>
-    <bpmn2:exclusiveGateway id="_4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3" drools:dg="_BA648518-7868-42EE-ACF9-2CA76042FD84" name="Battery above
- 80% ?" gatewayDirection="Diverging" default="_BA648518-7868-42EE-ACF9-2CA76042FD84">
-      <bpmn2:extensionElements>
-        <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Battery above
- 80% ?]]></drools:metaValue>
-        </drools:metaData>
-      </bpmn2:extensionElements>
-      <bpmn2:incoming>_B2F99227-0084-4194-979D-E32E0EA1E0A1</bpmn2:incoming>
-      <bpmn2:outgoing>_BA648518-7868-42EE-ACF9-2CA76042FD84</bpmn2:outgoing>
-      <bpmn2:outgoing>_8F596190-157C-4928-8E80-0404A342CAF7</bpmn2:outgoing>
-    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="_B4F12308-BB61-4A0D-8846-23A4D47E4127" sourceRef="_BF464CDB-78AA-479B-AF03-F314EE798E0D" targetRef="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E"/>
     <bpmn2:startEvent id="_B5CCC057-EF30-4952-B1A7-DE82EDC33570" name="LEV plugged
 into charger ">
       <bpmn2:extensionElements>
@@ -71,10 +65,66 @@ into charger ]]></drools:metaValue>
       <bpmn2:outgoing>_19D786FC-D7FB-4C03-B719-FF352D327937</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:exclusiveGateway id="_08F3C379-D075-4F62-9CAC-3A40F6E01151" gatewayDirection="Converging">
+      <bpmn2:incoming>_0ED6ECD3-F9D1-4F1F-805F-6FD62FD9D9F9</bpmn2:incoming>
       <bpmn2:incoming>_8E979A52-2DFD-42E6-AFFD-8E4CE717A781</bpmn2:incoming>
-      <bpmn2:incoming>_8F596190-157C-4928-8E80-0404A342CAF7</bpmn2:incoming>
       <bpmn2:outgoing>_C92D2FE5-BDF6-4644-A873-4E2D21BAF909</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="_1FA2600B-D753-4892-9C98-B7D34C741AFD" gatewayDirection="Converging">
+      <bpmn2:incoming>_EC761C30-65BF-45EA-A201-E216CF6C2F74</bpmn2:incoming>
+      <bpmn2:incoming>_40351DF8-5210-4EAB-A9B3-CAB8D471E936</bpmn2:incoming>
+      <bpmn2:outgoing>_5F8F2A84-738B-4BAE-9592-FF0B237B5603</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:businessRuleTask id="_BF464CDB-78AA-479B-AF03-F314EE798E0D" name="Get charging type" implementation="http://www.jboss.org/drools/dmn">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Get charging type]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_296ADE49-62ED-425F-B8B5-52C0256C9BFC</bpmn2:incoming>
+      <bpmn2:outgoing>_B4F12308-BB61-4A0D-8846-23A4D47E4127</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_9BcwA8dVEeuK_O8NefNLuw">
+        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX" drools:dtype="java.lang.String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputXItem" name="namespace"/>
+        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX" drools:dtype="java.lang.String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputXItem" name="decision"/>
+        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputX" drools:dtype="String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputXItem" name="lev_type"/>
+        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputX" drools:dtype="Integer" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputXItem" name="battery"/>
+        <bpmn2:dataOutput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputX" drools:dtype="String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputXItem" name="charging"/>
+        <bpmn2:inputSet id="_9BcwBMdVEeuK_O8NefNLuw">
+          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_9BcwBcdVEeuK_O8NefNLuw">
+          <bpmn2:dataOutputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_9BcwBsdVEeuK_O8NefNLuw">
+        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_9BcwB8dVEeuK_O8NefNLuw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_9BcwCMdVEeuK_O8NefNLuw"><![CDATA[https://kiegroup.org/dmn/_56E6A7EB-1B84-4508-91E5-B5DC59F21070]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_9BcwCcdVEeuK_O8NefNLuw">_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_9BcwCsdVEeuK_O8NefNLuw">
+        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_9BcwC8dVEeuK_O8NefNLuw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_9BcwDMdVEeuK_O8NefNLuw"><![CDATA[charging]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_9BcwDcdVEeuK_O8NefNLuw">_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_9BcwDsdVEeuK_O8NefNLuw">
+        <bpmn2:sourceRef>lev_type</bpmn2:sourceRef>
+        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_9BcwD8dVEeuK_O8NefNLuw">
+        <bpmn2:sourceRef>battery</bpmn2:sourceRef>
+        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_9BcwEMdVEeuK_O8NefNLuw">
+        <bpmn2:sourceRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>charging</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:businessRuleTask>
     <bpmn2:scriptTask id="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8" name="Notify server" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
@@ -82,57 +132,23 @@ into charger ]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_B98D2DA4-13BD-46E5-80C0-3EDC1DD0232F</bpmn2:incoming>
-      <bpmn2:outgoing>_B2F99227-0084-4194-979D-E32E0EA1E0A1</bpmn2:outgoing>
+      <bpmn2:outgoing>_296ADE49-62ED-425F-B8B5-52C0256C9BFC</bpmn2:outgoing>
       <bpmn2:script><![CDATA[java.lang.Integer lev = (java.lang.Integer) kcontext.getVariable("lev_id");
 java.lang.Integer bat = (java.lang.Integer) kcontext.getVariable("battery");
 System.out.println("Plugged in device no. " + lev);
 System.out.println("Battery status: " + bat);]]></bpmn2:script>
     </bpmn2:scriptTask>
-    <bpmn2:businessRuleTask id="_BF464CDB-78AA-479B-AF03-F314EE798E0D" name="Get charging type" implementation="http://www.jboss.org/drools/dmn">
+    <bpmn2:task id="_D9FD6FD0-005B-469A-8293-49EB9ABA4864" name="Charge LEV - 
+slow charging">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Get charging type]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Charge LEV - 
+slow charging]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:ioSpecification id="_otNQMcdUEeuK_O8NefNLuw">
-        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX" drools:dtype="java.lang.String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputXItem" name="namespace"/>
-        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX" drools:dtype="java.lang.String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputXItem" name="decision"/>
-        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputX" drools:dtype="String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputXItem" name="lev_type"/>
-        <bpmn2:dataInput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputX" drools:dtype="Integer" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputXItem" name="battery"/>
-        <bpmn2:dataOutput id="_BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputX" drools:dtype="String" itemSubjectRef="__BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputXItem" name="charging"/>
-        <bpmn2:inputSet id="_otNQMsdUEeuK_O8NefNLuw">
-          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputX</bpmn2:dataInputRefs>
-        </bpmn2:inputSet>
-        <bpmn2:outputSet id="_otNQM8dUEeuK_O8NefNLuw">
-          <bpmn2:dataOutputRefs>_BF464CDB-78AA-479B-AF03-F314EE798E0D_chargingOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
-      </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_otNQNMdUEeuK_O8NefNLuw">
-        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_otNQNcdUEeuK_O8NefNLuw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_otNQNsdUEeuK_O8NefNLuw"><![CDATA[https://kiegroup.org/dmn/_56E6A7EB-1B84-4508-91E5-B5DC59F21070]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_otNQN8dUEeuK_O8NefNLuw">_BF464CDB-78AA-479B-AF03-F314EE798E0D_namespaceInputX</bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_otNQOMdUEeuK_O8NefNLuw">
-        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_otNQOcdUEeuK_O8NefNLuw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_otNQOsdUEeuK_O8NefNLuw"><![CDATA[charging]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_otNQO8dUEeuK_O8NefNLuw">_BF464CDB-78AA-479B-AF03-F314EE798E0D_decisionInputX</bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_otNQPMdUEeuK_O8NefNLuw">
-        <bpmn2:sourceRef>lev_type</bpmn2:sourceRef>
-        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_lev_typeInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_otNQPcdUEeuK_O8NefNLuw">
-        <bpmn2:sourceRef>battery</bpmn2:sourceRef>
-        <bpmn2:targetRef>_BF464CDB-78AA-479B-AF03-F314EE798E0D_batteryInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-    </bpmn2:businessRuleTask>
+      <bpmn2:incoming>_3A579402-6A99-4F27-B30D-7DE92BA60315</bpmn2:incoming>
+      <bpmn2:outgoing>_40351DF8-5210-4EAB-A9B3-CAB8D471E936</bpmn2:outgoing>
+    </bpmn2:task>
     <bpmn2:scriptTask id="_00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930" name="Get LEV status" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
@@ -172,18 +188,18 @@ charged ]]></drools:metaValue>
           <drools:metaValue><![CDATA[Stop charging]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:incoming>_CFBFF9DF-EE09-48AF-89DE-EBAA73B37C54</bpmn2:incoming>
+      <bpmn2:incoming>_5F8F2A84-738B-4BAE-9592-FF0B237B5603</bpmn2:incoming>
       <bpmn2:outgoing>_8E979A52-2DFD-42E6-AFFD-8E4CE717A781</bpmn2:outgoing>
       <bpmn2:script><![CDATA[System.out.println("Charging stopped");]]></bpmn2:script>
     </bpmn2:scriptTask>
-    <bpmn2:scriptTask id="_2D353FE5-7EA9-4442-9D02-125BDD913A92" name="Charge LEV" scriptFormat="http://www.java.com/java">
+    <bpmn2:scriptTask id="_2D353FE5-7EA9-4442-9D02-125BDD913A92" name="Charge LEV - fast charging" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Charge LEV]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Charge LEV - fast charging]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:incoming>_BA648518-7868-42EE-ACF9-2CA76042FD84</bpmn2:incoming>
-      <bpmn2:outgoing>_CFBFF9DF-EE09-48AF-89DE-EBAA73B37C54</bpmn2:outgoing>
+      <bpmn2:incoming>_CE593B38-2CF4-4B32-AFCD-416B7FAC09F3</bpmn2:incoming>
+      <bpmn2:outgoing>_EC761C30-65BF-45EA-A201-E216CF6C2F74</bpmn2:outgoing>
       <bpmn2:script><![CDATA[java.lang.Integer bat = (java.lang.Integer) kcontext.getVariable("battery");
 
 while(bat<100){
@@ -205,69 +221,95 @@ java.lang.Integer bat = (java.lang.Integer) kcontext.getVariable("battery");
 System.out.println("Unplugged device no. " + lev);
 System.out.println("Battery status: " + bat);]]></bpmn2:script>
     </bpmn2:scriptTask>
-    <bpmn2:exclusiveGateway id="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" name="Charging type?">
+    <bpmn2:exclusiveGateway id="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" drools:dg="_0ED6ECD3-F9D1-4F1F-805F-6FD62FD9D9F9" name="Charging type?" gatewayDirection="Diverging" default="_0ED6ECD3-F9D1-4F1F-805F-6FD62FD9D9F9">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
           <drools:metaValue><![CDATA[Charging type?]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:incoming>_B4F12308-BB61-4A0D-8846-23A4D47E4127</bpmn2:incoming>
+      <bpmn2:outgoing>_0ED6ECD3-F9D1-4F1F-805F-6FD62FD9D9F9</bpmn2:outgoing>
+      <bpmn2:outgoing>_3A579402-6A99-4F27-B30D-7DE92BA60315</bpmn2:outgoing>
+      <bpmn2:outgoing>_CE593B38-2CF4-4B32-AFCD-416B7FAC09F3</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_otNQPsdUEeuK_O8NefNLuw">
-    <bpmndi:BPMNPlane id="_otNQP8dUEeuK_O8NefNLuw" bpmnElement="Shaelectric.Chargedevice">
+  <bpmndi:BPMNDiagram id="_9BcwEcdVEeuK_O8NefNLuw">
+    <bpmndi:BPMNPlane id="_9BcwEsdVEeuK_O8NefNLuw" bpmnElement="Shaelectric.Chargedevice">
       <bpmndi:BPMNShape id="shape__2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" bpmnElement="_2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E">
-        <dc:Bounds height="56.0" width="56.0" x="719.1927" y="523.86865"/>
+        <dc:Bounds height="56.0" width="56.0" x="605.0" y="535.86865"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6" bpmnElement="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6">
-        <dc:Bounds height="102.0" width="154.0" x="1199.0" y="266.5"/>
+        <dc:Bounds height="102.0" width="154.0" x="1199.0" y="185.5"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__2D353FE5-7EA9-4442-9D02-125BDD913A92" bpmnElement="_2D353FE5-7EA9-4442-9D02-125BDD913A92">
-        <dc:Bounds height="102.0" width="154.0" x="741.0" y="268.25"/>
+        <dc:Bounds height="102.0" width="154.0" x="751.0" y="348.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__A56CAD33-A695-4F9C-985E-B90B38721AEA" bpmnElement="_A56CAD33-A695-4F9C-985E-B90B38721AEA">
-        <dc:Bounds height="102.0" width="154.0" x="975.0" y="268.0"/>
+        <dc:Bounds height="102.0" width="154.0" x="976.0" y="186.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__267D009A-15D0-4B9D-A7A2-544B05562087" bpmnElement="_267D009A-15D0-4B9D-A7A2-544B05562087">
-        <dc:Bounds height="56.0" width="56.0" x="1421.75" y="290.25"/>
+        <dc:Bounds height="56.0" width="56.0" x="1422.0" y="209.25"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930" bpmnElement="_00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930">
         <dc:Bounds height="102.0" width="154.0" x="174.0" y="268.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="shape__BF464CDB-78AA-479B-AF03-F314EE798E0D" bpmnElement="_BF464CDB-78AA-479B-AF03-F314EE798E0D">
-        <dc:Bounds height="102.0" width="153.99997" x="482.74057" y="500.58966"/>
+      <bpmndi:BPMNShape id="shape__D9FD6FD0-005B-469A-8293-49EB9ABA4864" bpmnElement="_D9FD6FD0-005B-469A-8293-49EB9ABA4864">
+        <dc:Bounds height="102.0" width="154.0" x="751.0" y="625.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8" bpmnElement="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8">
         <dc:Bounds height="102.0" width="154.0" x="377.0" y="267.16803"/>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__BF464CDB-78AA-479B-AF03-F314EE798E0D" bpmnElement="_BF464CDB-78AA-479B-AF03-F314EE798E0D">
+        <dc:Bounds height="102.0" width="154.0" x="377.0" y="512.58966"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__1FA2600B-D753-4892-9C98-B7D34C741AFD" bpmnElement="_1FA2600B-D753-4892-9C98-B7D34C741AFD">
+        <dc:Bounds height="56.0" width="56.0" x="1024.0" y="371.0"/>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__08F3C379-D075-4F62-9CAC-3A40F6E01151" bpmnElement="_08F3C379-D075-4F62-9CAC-3A40F6E01151">
-        <dc:Bounds height="56.0" width="56.0" x="1024.0" y="130.75"/>
+        <dc:Bounds height="56.0" width="56.0" x="1024.0" y="67.0"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="shape__B5CCC057-EF30-4952-B1A7-DE82EDC33570" bpmnElement="_B5CCC057-EF30-4952-B1A7-DE82EDC33570">
         <dc:Bounds height="56.0" width="56.0" x="62.0" y="291.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="shape__4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3" bpmnElement="_4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3">
-        <dc:Bounds height="56.0" width="56.0" x="620.0" y="291.25"/>
-      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__BF464CDB-78AA-479B-AF03-F314EE798E0D_to_shape__2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E" bpmnElement="_B4F12308-BB61-4A0D-8846-23A4D47E4127">
+        <di:waypoint xsi:type="dc:Point" x="454.0" y="563.58966"/>
+        <di:waypoint xsi:type="dc:Point" x="605.0" y="563.86865"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E_to_shape__08F3C379-D075-4F62-9CAC-3A40F6E01151" bpmnElement="_0ED6ECD3-F9D1-4F1F-805F-6FD62FD9D9F9">
+        <di:waypoint xsi:type="dc:Point" x="633.0" y="563.86865"/>
+        <di:waypoint xsi:type="dc:Point" x="633.0" y="95.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1024.0" y="95.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E_to_shape__D9FD6FD0-005B-469A-8293-49EB9ABA4864" bpmnElement="_3A579402-6A99-4F27-B30D-7DE92BA60315">
+        <di:waypoint xsi:type="dc:Point" x="633.0" y="591.86865"/>
+        <di:waypoint xsi:type="dc:Point" x="633.0" y="676.0"/>
+        <di:waypoint xsi:type="dc:Point" x="751.0" y="676.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__2DF4DF7C-B67B-4CA8-B0A2-CF6BBCA86C8E_to_shape__2D353FE5-7EA9-4442-9D02-125BDD913A92" bpmnElement="_CE593B38-2CF4-4B32-AFCD-416B7FAC09F3">
+        <di:waypoint xsi:type="dc:Point" x="661.0" y="563.86865"/>
+        <di:waypoint xsi:type="dc:Point" x="828.0" y="563.86865"/>
+        <di:waypoint xsi:type="dc:Point" x="828.0" y="450.0"/>
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__08F3C379-D075-4F62-9CAC-3A40F6E01151_to_shape__7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6" bpmnElement="_C92D2FE5-BDF6-4644-A873-4E2D21BAF909">
-        <di:waypoint xsi:type="dc:Point" x="1080.0" y="158.75"/>
-        <di:waypoint xsi:type="dc:Point" x="1276.0" y="158.75"/>
-        <di:waypoint xsi:type="dc:Point" x="1276.0" y="266.5"/>
+        <di:waypoint xsi:type="dc:Point" x="1080.0" y="95.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1276.0" y="95.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1276.0" y="185.5"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6_to_shape__267D009A-15D0-4B9D-A7A2-544B05562087" bpmnElement="_49458C81-71A1-4223-A836-1BB2FD4FA9A5">
-        <di:waypoint xsi:type="dc:Point" x="1276.0" y="317.5"/>
-        <di:waypoint xsi:type="dc:Point" x="1421.75" y="318.25"/>
+        <di:waypoint xsi:type="dc:Point" x="1353.0" y="236.5"/>
+        <di:waypoint xsi:type="dc:Point" x="1422.0" y="237.25"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3_to_shape__2D353FE5-7EA9-4442-9D02-125BDD913A92" bpmnElement="_BA648518-7868-42EE-ACF9-2CA76042FD84">
-        <di:waypoint xsi:type="dc:Point" x="648.0" y="319.25"/>
-        <di:waypoint xsi:type="dc:Point" x="741.0" y="319.25"/>
+      <bpmndi:BPMNEdge id="edge_shape__2D353FE5-7EA9-4442-9D02-125BDD913A92_to_shape__1FA2600B-D753-4892-9C98-B7D34C741AFD" bpmnElement="_EC761C30-65BF-45EA-A201-E216CF6C2F74">
+        <di:waypoint xsi:type="dc:Point" x="828.0" y="399.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1024.0" y="399.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__2D353FE5-7EA9-4442-9D02-125BDD913A92_to_shape__A56CAD33-A695-4F9C-985E-B90B38721AEA" bpmnElement="_CFBFF9DF-EE09-48AF-89DE-EBAA73B37C54">
-        <di:waypoint xsi:type="dc:Point" x="818.0" y="319.25"/>
-        <di:waypoint xsi:type="dc:Point" x="975.0" y="319.0"/>
+      <bpmndi:BPMNEdge id="edge_shape__1FA2600B-D753-4892-9C98-B7D34C741AFD_to_shape__A56CAD33-A695-4F9C-985E-B90B38721AEA" bpmnElement="_5F8F2A84-738B-4BAE-9592-FF0B237B5603">
+        <di:waypoint xsi:type="dc:Point" x="1052.0" y="399.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1053.0" y="288.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__A56CAD33-A695-4F9C-985E-B90B38721AEA_to_shape__08F3C379-D075-4F62-9CAC-3A40F6E01151" bpmnElement="_8E979A52-2DFD-42E6-AFFD-8E4CE717A781">
-        <di:waypoint xsi:type="dc:Point" x="1052.0" y="319.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1052.0" y="186.75"/>
+        <di:waypoint xsi:type="dc:Point" x="1053.0" y="237.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1052.0" y="123.0"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="edge_shape__B5CCC057-EF30-4952-B1A7-DE82EDC33570_to_shape__00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930" bpmnElement="_19D786FC-D7FB-4C03-B719-FF352D327937">
         <di:waypoint xsi:type="dc:Point" x="90.0" y="319.0"/>
@@ -277,23 +319,23 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
         <di:waypoint xsi:type="dc:Point" x="251.0" y="319.0"/>
         <di:waypoint xsi:type="dc:Point" x="377.0" y="318.16803"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8_to_shape__4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3" bpmnElement="_B2F99227-0084-4194-979D-E32E0EA1E0A1">
-        <di:waypoint xsi:type="dc:Point" x="454.0" y="318.16803"/>
-        <di:waypoint xsi:type="dc:Point" x="620.0" y="319.25"/>
+      <bpmndi:BPMNEdge id="edge_shape__D9FD6FD0-005B-469A-8293-49EB9ABA4864_to_shape__1FA2600B-D753-4892-9C98-B7D34C741AFD" bpmnElement="_40351DF8-5210-4EAB-A9B3-CAB8D471E936">
+        <di:waypoint xsi:type="dc:Point" x="905.0" y="676.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1052.0" y="676.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1052.0" y="427.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="edge_shape__4B5C4515-BD2F-43A4-8A5E-1904B69EF2A3_to_shape__08F3C379-D075-4F62-9CAC-3A40F6E01151" bpmnElement="_8F596190-157C-4928-8E80-0404A342CAF7">
-        <di:waypoint xsi:type="dc:Point" x="648.0" y="319.25"/>
-        <di:waypoint xsi:type="dc:Point" x="648.0" y="157.75"/>
-        <di:waypoint xsi:type="dc:Point" x="1024.0" y="158.75"/>
+      <bpmndi:BPMNEdge id="edge_shape__A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8_to_shape__BF464CDB-78AA-479B-AF03-F314EE798E0D" bpmnElement="_296ADE49-62ED-425F-B8B5-52C0256C9BFC">
+        <di:waypoint xsi:type="dc:Point" x="454.0" y="318.16803"/>
+        <di:waypoint xsi:type="dc:Point" x="454.0" y="512.58966"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_otNQQMdUEeuK_O8NefNLuw" type="BPSimData">
+  <bpmn2:relationship id="_9BcwE8dVEeuK_O8NefNLuw" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6" id="_otNQQcdUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_7B8415BA-DBC8-49F2-ABD2-9E426F52D6A6" id="_9BcwFMdVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -313,7 +355,7 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_2D353FE5-7EA9-4442-9D02-125BDD913A92" id="_otNQQsdUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_2D353FE5-7EA9-4442-9D02-125BDD913A92" id="_9BcwFcdVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -333,7 +375,7 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A56CAD33-A695-4F9C-985E-B90B38721AEA" id="_otNQQ8dUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A56CAD33-A695-4F9C-985E-B90B38721AEA" id="_9BcwFsdVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -353,7 +395,7 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930" id="_otNQRMdUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_00CB8FBA-5BE4-4E2A-A73D-FD6F79FF0930" id="_9BcwF8dVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -373,7 +415,7 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_BF464CDB-78AA-479B-AF03-F314EE798E0D" id="_otNQRcdUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D9FD6FD0-005B-469A-8293-49EB9ABA4864" id="_9BcwGMdVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -393,7 +435,7 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8" id="_otNQRsdUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_A47060D8-9A13-48FD-B64A-E8CAF3DBD5E8" id="_9BcwGcdVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -413,7 +455,27 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_B5CCC057-EF30-4952-B1A7-DE82EDC33570" id="_otNQR8dUEeuK_O8NefNLuw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_BF464CDB-78AA-479B-AF03-F314EE798E0D" id="_9BcwGsdVEeuK_O8NefNLuw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_B5CCC057-EF30-4952-B1A7-DE82EDC33570" id="_9BcwG8dVEeuK_O8NefNLuw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -423,7 +485,7 @@ System.out.println("Battery status: " + bat);]]></bpmn2:script>
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_otMpIMdUEeuK_O8NefNLuw</bpmn2:source>
-    <bpmn2:target>_otMpIMdUEeuK_O8NefNLuw</bpmn2:target>
+    <bpmn2:source>_9BcwAMdVEeuK_O8NefNLuw</bpmn2:source>
+    <bpmn2:target>_9BcwAMdVEeuK_O8NefNLuw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
