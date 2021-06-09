@@ -1,0 +1,1 @@
+{"id":"5c0d4fa1-39f7-4a48-a1e5-fdad54e1509c","name":"ReturnToService-taskform.frm","model":{"taskName":"ReturnToService","processId":"Shaelectric.Repairlevprocess","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":3,"style":"FLUID","layoutProperties":{},"rows":[]}}

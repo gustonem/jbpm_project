@@ -8,12 +8,14 @@
             "documentation" : "jbpm-workitems-rest/index.html",
 
             "parameters" : [
-                                "ConnectTimeout" : new StringDataType()
+                                "Cookie" : new StringDataType()
+                ,"ConnectTimeout" : new StringDataType()
                 ,"ResultClass" : new StringDataType()
                 ,"ContentType" : new StringDataType()
                 ,"AcceptCharset" : new StringDataType()
                 ,"Headers" : new StringDataType()
                 ,"AuthUrl" : new StringDataType()
+                ,"CookiePath" : new StringDataType()
                 ,"Method" : new StringDataType()
                 ,"ReadTimeout" : new StringDataType()
                 ,"Url" : new StringDataType()
@@ -32,10 +34,10 @@
 
             ],
             "mavenDependencies" : [
-                                 "org.jbpm:jbpm-workitems-rest:7.49.0.Final"
+                                 "org.jbpm:jbpm-workitems-rest:7.54.0.Final"
 
             ],
-            "icon" : "Rest.png"
+            "icon" : "defaultresticon.png"
 
         ]
 

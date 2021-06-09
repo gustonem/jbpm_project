@@ -12,12 +12,6 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp.gmail.com", "587", "jbpm.sharelectric@gmail.com", "JbpmMuni2021", "true")</identifier>
-            <parameters/>
-            <name>Email</name>
-        </work-item-handler>
-        <work-item-handler>
-            <resolver>mvel</resolver>
             <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler("", "")</identifier>
             <parameters/>
             <name>Rest</name>

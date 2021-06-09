@@ -9,15 +9,28 @@ public class UserDb implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO, generator = "USERDB_ID_GENERATOR")
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(name = "USERDB_ID_GENERATOR", sequenceName = "USERDB_ID_SEQ")
+	private java.lang.Long id;
+
 	private java.lang.String name;
 
 	private java.lang.String surname;
 
 	private java.lang.String email;
 
-	private java.lang.String password;
+	private java.lang.String bankAccount;
 
 	public UserDb() {
+	}
+
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
 	}
 
 	public java.lang.String getName() {
@@ -44,20 +57,22 @@ public class UserDb implements java.io.Serializable {
 		this.email = email;
 	}
 
-	public java.lang.String getPassword() {
-		return this.password;
+	public java.lang.String getBankAccount() {
+		return this.bankAccount;
 	}
 
-	public void setPassword(java.lang.String password) {
-		this.password = password;
+	public void setBankAccount(java.lang.String bankAccount) {
+		this.bankAccount = bankAccount;
 	}
 
-	public UserDb(java.lang.String name, java.lang.String surname,
-			java.lang.String email, java.lang.String password) {
+	public UserDb(java.lang.Long id, java.lang.String name,
+			java.lang.String surname, java.lang.String email,
+			java.lang.String bankAccount) {
+		this.id = id;
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
-		this.password = password;
+		this.bankAccount = bankAccount;
 	}
 
 }
